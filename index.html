@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo</title>
+</head>
+<body>
+
+    <div id="root">Bonjour OpenClassroom</div>
+
+
+    <!-- Load React -->
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@16/umd/react.production.min.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js">
+    </script>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        console.log(React); // You can see here React library!
+    
+        ReactDOM.render(
+            <div>Mon élément remplace le contenu précédent !</div>,
+            document.getElementById('root')
+        )
+
+        function MyFirstComponent() {
+            return <div>Mon composant apparaît bien et donc remplace le contenu précédent !</div>
+        }
+        ReactDOM.render(
+            <MyFirstComponent />,
+            document.getElementById('root')
+        )
+    </script>
+    
+</body>
+</html>
